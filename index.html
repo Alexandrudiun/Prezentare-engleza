@@ -7,6 +7,13 @@
 			background-color: #C8102E;
 			color: #FFF;
 			font-family: Arial, sans-serif;
+			animation: background-animation 10s linear infinite;
+		}
+		
+		@keyframes background-animation {
+			0% {background-color: #C8102E;}
+			50% {background-color: #FFF;}
+			100% {background-color: #C8102E;}
 		}
 		
 		h1 {
@@ -14,38 +21,58 @@
 			font-size: 4em;
 			margin-top: 50px;
 			margin-bottom: 50px;
+			animation: text-animation 2s ease-in-out;
+		}
+		
+		@keyframes text-animation {
+			0% {opacity: 0;}
+			50% {opacity: 0.5;}
+			100% {opacity: 1;}
 		}
 		
 		h2 {
 			font-size: 2em;
 			margin-top: 30px;
 			margin-bottom: 10px;
+			animation: text-animation 2s ease-in-out;
 		}
 		
 		p {
 			font-size: 1.2em;
 			margin-bottom: 20px;
+			animation: text-animation 2s ease-in-out;
 		}
 		
 		ul {
 			margin-left: 40px;
 			margin-bottom: 20px;
+			animation: text-animation 2s ease-in-out;
 		}
 		
 		li {
 			margin-bottom: 5px;
+			animation: list-animation 2s ease-in-out;
+		}
+		
+		@keyframes list-animation {
+			0% {transform: translateY(20px); opacity: 0;}
+			50% {transform: translateY(10px); opacity: 0.5;}
+			100% {transform: translateY(0); opacity: 1;}
 		}
 		
 		a {
 			color: #FFF;
 			text-decoration: none;
 			border-bottom: 2px solid #FFF;
+			transition: all 0.2s ease-in-out;
 		}
 		
 		a:hover {
 			color: #C8102E;
 			background-color: #FFF;
 			border-bottom: 2px solid #C8102E;
+			transform: translateY(-2px);
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 		}
 	</style>
 </head>
